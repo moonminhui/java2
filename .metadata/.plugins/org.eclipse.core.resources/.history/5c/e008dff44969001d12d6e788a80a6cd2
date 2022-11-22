@@ -1,0 +1,52 @@
+package com.yedam.variable;
+
+public class Exam02 {
+	public static void main(String[] args) {
+		int var1 = 0b1011; //2진수
+		int var2 = 0206;   //8진수
+		int var3 = 365;    //10진수
+		int var4 = 0xB3;   //16진수
+		
+		System.out.println("var1: " + var1);
+		System.out.println("var2: " + var2);
+		System.out.println("var3: " + var3);
+		System.out.println("var4: " + var4);
+		
+		//byte -128 ~ 127
+		byte bVal = -128;
+		byte bVal2 = 0;
+		byte bVal3 = 127;
+		int bVal4 = 500; //범위에 해당 안 되니 int로 바꾸시오
+		
+		//long
+		long lval =10;
+		long lval2 =20L;
+		long lval3 =10000000000L; //int 범위를 넘으면 L을 붙여야 인식됨
+		
+		//char (유니코드)
+		//문자만 넣을 수 있음
+		//문자열과 문자는 다름
+		//문자열 => 문자가 모여서 만들어 진 것임
+		//ex) "apple"
+		//문자 => 하나의 알파벳
+		//ex) 'A', 'B'
+		char cVar = 'A';
+		char cVar2 = '가'; //65
+		char cVar3 = 67;
+		char cVar4 = 0x0041; //C
+		
+		System.out.println(cVar);
+		System.out.println(cVar2);
+		System.out.println(cVar3);
+		System.out.println(cVar4);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

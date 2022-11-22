@@ -1,0 +1,63 @@
+package com.yedam.variable;
+
+public class Exam03 {
+	public static void main(String[] args) {
+		
+		//자동 타입 변환
+		char cVar = 'A'+1; //A=65
+		int iVar = cVar;
+		System.out.println(iVar+1);
+		
+		double dVar = iVar;
+		System.out.println(dVar);
+		System.out.println();
+		
+		//강제 타입 변환
+		iVar = (int)dVar; //원래는 큰 허용 범위 타입은 작은 허용 범위 타입으로 변환될 수 없어서 안 됨
+		System.out.println(iVar);
+		cVar = (char)iVar;
+		System.out.println(cVar);
+		System.out.println();
+		
+		double dVar2 = 3.14444;
+		int iVar2 = (int)dVar2; //싷수와 정수를 이용해서
+		System.out.println(iVar2);
+		
+		//자동 타입 변환을 활용한 연산
+		byte result = 10 +20;
+		System.out.println(result);
+		
+		byte x = 10;
+		byte y = 20;
+		int result2 = x+y; // byte가 아니라 int로 변환해야 함 
+		//강제 타입 변환 활용
+		byte result3 = (byte)(x+y);
+		
+		//데이터 타입 크기에 따른 연산
+		//long + ing = long
+		//byte + int = int
+		byte bVar = 10;
+		int iVar = 100;
+		long lVar = 1000L;
+		long result3 = bVar+iVar+lVar;
+		System.out.println(result3);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

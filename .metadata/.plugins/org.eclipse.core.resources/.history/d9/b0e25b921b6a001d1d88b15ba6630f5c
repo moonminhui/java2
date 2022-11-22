@@ -1,0 +1,135 @@
+package com.yedam.loop;
+
+public class Exam01 {
+	public static void main(String[] args) {
+		int sum = 0;
+		//1) 규칙 찾기
+//		sum = sum + 1; //sum = 0 + 1 -> 1
+//		sum = sum + 2; //sum = 1 + 2 -> 3
+//		sum = sum + 3; //sum = 3 + 3 -> 6
+//		sum = sum + 4; //sum = 6 + 4 -> 10
+//		sum = sum + 5; //sum = 10 + 5 -> 15 => 1 ~ 5의 합
+
+		//1 ~ 5까지의 합을 구하는 반복문
+		for(int i=0; i<=5; i++) {
+			sum = sum + i;
+		}
+	
+		//1 ~ 100 사이에서 짝수 구하는 반복문
+		for(int i=1; i<=100; i++) {
+			if(i % 2 == 0) { //짝수
+				//System.out.println(i);
+			}
+		}
+	
+		//1 ~ 100 사이에서 홀수 구하는 반복문
+		for(int i=100; i>=1; i--) { //증감식
+			if(i % 2 == 1) { //홀수
+				System.out.println(i);
+			}
+		}
+	
+		//1 ~ 100 사이에서 2의 배수 또는 3의 배수 찾기
+		//규칙
+		//2의 배수 : 2 4 6 8 10 ... => i % 2 == 0
+		//3의 배수 : 3 6 9 12 15 ... => i % 3 == 0
+		for(int i=0; i<=100; i++) {
+			if(i % 2 == 0 || i % 3 == 0) {
+				//System.out.println(i + "는 2의 배수 또는 3의 배수입니다.");
+			}
+		}
+		
+		//1 ~ 100 사이에서 2의 배수이거나 3의 배수 찾기 => 6의 배수
+		for(int i=1; i<=100; i++) {
+			if(i % 2 == 0 && i % 3 == 0) {
+				System.out.println(i + "는 2의 배수이거나 3의 배수입니다.");
+			}
+		}
+	
+		
+		//구구단 출력(2단)
+		//2*i
+		for(int i=1; i<=9; i++) {
+			System.out.println("2 * " + i + " = " + (2*i));
+		}
+		
+		//for문 안에 for문 : 중첩 반복문
+		//초기화 식에 들어가는 변수 2개를 고려
+		//구구단 출력(2 ~ 9단)
+		//밖 for문 : 단, 안 for문 : 
+		for(int i=2; i<=9; i++) {
+			for(int j=1; j<=9; j++) {
+				System.out.println(i + " * " + j + " = " + (i*j));
+			}
+		}
+		
+		
+		//별 찍기...★
+		
+		//*****
+		//*****
+		//*****
+		//*****
+		//***** => 첫 번째 줄 전체적으로 다 만들고, 한 줄씩 전체적으로 만듦
+		for(int i=0; i<5; i++) { //한 칸씩 내려갈 때 쓰는 반복문
+			String star = ""; //초기값 설정
+			for(int j=0; j<5; j++) { //별을 만드는 반복문
+				star = star + "*"; //+ 연산자 활용하여 ***** 만듦
+			}
+			System.out.println(star);
+		}
+		System.out.println();
+		
+		//*
+		//**
+		//***
+		//****
+		//*****
+		for(int i=1; i<=5; i++) {
+			String star = "";
+			for(int j=0; i>j; j++) { //별을 찍기 위해 j=0으로 설정
+				star = star + "*";
+			}
+			System.out.println(star);
+		}
+		System.out.println();
+		
+		//*****
+		//****
+		//***
+		//**
+		//*
+		for(int i=5; i>=1; i--) {
+			String star = "";
+			for(int j=0; i>j; j++) {
+				star = star + "*";
+			}
+			System.out.println(star);
+		}
+		
+		//    *
+		//   **
+		//  ***
+		// ****
+		//*****
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	                                 
+	
+	}
+}

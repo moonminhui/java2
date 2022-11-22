@@ -1,0 +1,158 @@
+package com.yedam.condition;
+
+import java.util.Scanner;
+
+public class EXam01 {
+	public static void main(String[] args) {
+		//Math.random() -> 0 <= Math.random() < 1
+		//0 * 60 <= Math.random() * 60 < 1 * 60
+		//0 <= Math.random() < 60
+		//0 + 40 <= Math.random() < 60 + 40
+		//40 <= Math.random() < 100, 40~99
+		//실수 -> 정수, casting(강제 타입 변환)
+		int score = (int)(Math.random() * 60) + 40;
+		
+		if(score >= 60) {
+			System.out.println("합격");
+		} else {
+			System.out.println("불합격");
+		}
+		
+		//삼항 연산자
+		String pass = (score >= 60) ? "합격" : "불합격";
+		System.out.println(pass);
+		
+		
+		//if ~ else문
+		//90 이상 : A
+		//80~90 : B
+		//70~80 : C
+		//70 미만 : D
+		if(score >= 90) {
+			pass = "A";
+		} else {
+			if(score >= 80) {
+				pass = "B";
+			} else {
+				if(score >= 70) {
+					pass = "C";
+		} else {
+			pass = "D";
+		}
+	}		
+}
+
+		//if ~ else if문
+		if(score >= 90) {
+			pass = "A";
+		} else if(score >= 80) {
+			pass = "B";
+		} else if(score >= 70) {
+			pass = "C";
+		} else {
+			pass = "D";
+		}
+		
+		//if문을 활용한 예제
+		//사용자가 입력한 값이 1, 2,..., 9이면 "one", "two",..., "nine"
+		//과 같이 출력하는 프로그램을 작성하고, 1~9 사이가 아니면 other
+		//출력하시오.
+		Scanner sc = new Scanner(System.in);
+//		//사용자가 데이터 입력
+		System.out.println("숫자 입력 >");
+		int no = Integer.parseInt(sc.nextLine());
+		
+		//1.
+//		if(no == 1) {
+//			System.out.println("one");
+//		} else if(no == 2) {
+//			System.out.println("two");
+//		} else if(no == 3) {
+//			System.out.println("three");
+//		} else if(no == 4) {
+//			System.out.println("four");
+//		} else if(no == 5) {
+//			System.out.println("five");
+//		} else if(no == 6) {
+//			System.out.println("six");
+//		} else if(no == 7) {
+//			System.out.println("seven");
+//		} else if(no == 8) {
+//			System.out.println("eight");
+//		} else if(no == 9) {
+//			System.out.println("nine");
+//		} else {
+//			System.out.println("other");
+//		}		
+		
+		//2.
+//		String en;
+//		if(no == 1) {
+//			en = "one";
+//		} else if(no == 2) {
+//			en = "two";
+//		} else if(no == 3) {
+//			en = "three";
+//		} else if(no == 4) {
+//			en = "four";
+//		} else if(no == 5) {
+//			en = "five";
+//		} else if(no == 6) {
+//			en = "six";
+//		} else if(no == 7) {
+//			en = "seven";
+//		} else if(no == 8) {
+//			en = "eight";
+//		} else if(no == 9) {
+//			en = "nine";
+//		} else {
+//			en = "other";
+//		}
+//		System.out.println(en);
+		
+		
+		//switch문
+		switch (no) { //'switch' = '=='
+		case 1:
+			System.out.println("one");
+			break;
+		case 2:
+			System.out.println("two");
+			break;
+		case 3:
+			System.out.println("three");
+			break;
+		case 4:
+			System.out.println("four");
+			break;
+		case 5:
+			System.out.println("five");
+			break;
+		case 6:
+			System.out.println("six");
+			break;
+		case 7:
+			System.out.println("seven");
+			break;
+		case 8:
+			System.out.println("eight");
+			break;
+		case 9:
+			System.out.println("nine");
+			break;
+		default: 
+			System.out.println("other");
+			break;
+				
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

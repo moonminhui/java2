@@ -1,0 +1,43 @@
+package com.yedam.condition;
+
+import java.util.Scanner;
+
+public class Exam02 {
+	public static void main(String[] args) {
+		
+		//학점 계산하기
+		//switch문으로 변경
+		//사용자가 입력한 점수를 토대로 학점을 출력
+		//90 이상은 A
+		//80~89 B
+		//70~79 C
+		//60~69 D
+		//그 외는 F
+		Scanner sc = new Scanner(System.in);
+		System.out.println("성적 입력 >");
+		int score = Integer.parseInt(sc.nextLine());
+		
+		//추가 문제 활용
+		int value = score / 10;
+
+		//switch문은 부등호 사용 못함
+		switch(value) {
+		//case 10:
+		case 9: 
+		System.out.println('A');
+		break;
+		case 8: 
+		System.out.println('B');
+		break;
+		case 7: 
+		System.out.println('C');
+		break;
+		case 6: 
+		System.out.println('D');
+		break;
+		default: 
+		System.out.println('F');
+		break;
+		}
+	}
+}
